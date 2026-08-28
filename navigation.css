@@ -1,0 +1,64 @@
+/* Shared navigation geometry for every page. */
+:root {
+  --nav-width: clamp(48px, 7.6vw, 104px);
+  --nav-height: clamp(29px, 4.54vw, 62px);
+  --nav-edge: clamp(52px, 8.05vw, 110px);
+  --nav-top: clamp(35px, 5.5vw, 75px);
+  --nav-panel-width: clamp(80px, 13.2vw, 180px);
+  --nav-panel-gap: clamp(6px, .73vw, 10px);
+}
+
+.menu-button {
+  position: absolute;
+  z-index: 10;
+  top: var(--nav-top);
+  left: calc(100vw - var(--nav-width) - var(--nav-edge));
+  right: auto;
+  bottom: auto;
+  width: var(--nav-width);
+  height: var(--nav-height);
+}
+
+.menu-panel {
+  position: absolute;
+  z-index: 9;
+  top: calc(var(--nav-top) + var(--nav-height) + var(--nav-panel-gap));
+  left: calc(100vw - var(--nav-panel-width) - var(--nav-edge));
+  right: auto;
+  bottom: auto;
+  width: var(--nav-panel-width);
+  padding: clamp(9px, 1.32vw, 18px) clamp(10px, 1.46vw, 20px);
+}
+
+.menu-panel a {
+  font-size: clamp(16px, 1.83vw, 25px);
+}
+
+/* Browser zoom can place the About portrait directly below the menu.
+   Keep the menu in the same top band before the phone layout begins. */
+@media (min-width: 601px) and (max-width: 900px) {
+  .menu-button {
+    top: 30px;
+  }
+
+  .menu-panel {
+    top: calc(30px + var(--nav-height) + var(--nav-panel-gap));
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-button {
+    top: 30px;
+    right: 28px;
+    left: auto;
+    width: 85px;
+    height: 52px;
+  }
+
+  .menu-panel {
+    top: 96px;
+    right: 28px;
+    left: auto;
+    width: 160px;
+  }
+}
