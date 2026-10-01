@@ -35,7 +35,7 @@
     h1 em { color:var(--earth); }
     .intro { max-width:660px; margin:35px 0 0; color:#595a52; font-size:14px; line-height:1.65; }
     .selected-work { max-width:880px; height:clamp(360px,40vw,520px); margin:0 0 68px; overflow:hidden; position:relative; background:#d6c7b2; }
-    .work-card { position:absolute; inset:0; display:grid; grid-template-columns:1.2fr .8fr; opacity:0; animation:show-card 15s infinite; }
+    .work-card { position:absolute; inset:0; display:grid; grid-template-columns:35% 65%; opacity:0; animation:show-card 15s infinite; }
     .work-card:nth-child(2) { animation-delay:5s; }
     .work-card:nth-child(3) { animation-delay:10s; }
     .work-copy { position:relative; z-index:1; display:flex; flex-direction:column; justify-content:space-between; padding:clamp(25px,4.2vw,54px); }
@@ -72,8 +72,9 @@
       header { margin:9vh 0 7vh; }
       .intro { margin-top:28px; }
       .selected-work { height:420px; margin-bottom:52px; }
-      .work-card { grid-template-columns:1.15fr .85fr; }
+      .work-card { grid-template-columns:38% 62%; }
       .work-copy { padding:27px; }
+      .work-title { font-size:13px; }
       .work-cover { padding:12px; }
       .entry { grid-template-columns:34px minmax(0,1fr); gap:10px; padding:12px 0; }
     }
