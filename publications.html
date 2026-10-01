@@ -40,16 +40,17 @@
     .work-card:nth-child(3) { animation-delay:10s; }
     .work-copy { position:relative; z-index:1; display:flex; flex-direction:column; justify-content:space-between; padding:clamp(25px,4.2vw,54px); }
     .work-label { margin:0; font-size:9px; font-weight:500; letter-spacing:.17em; text-transform:uppercase; }
-    .work-title { max-width:430px; margin:0; font-family:"Playfair Display",Georgia,serif; font-size:clamp(18px,1.9vw,27px); font-weight:500; line-height:1.04; letter-spacing:-.04em; }
+    .work-title { max-width:430px; margin:0; font-family:"Playfair Display",Georgia,serif; font-size:clamp(21px,2.6vw,34px); font-weight:500; line-height:1.04; letter-spacing:-.04em; }
     .work-meta { margin:0; font-size:10px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; }
     .work-card.vernacular .work-meta { max-width:390px; line-height:1.45; }
     .work-cover { position:relative; z-index:1; display:flex; height:100%; align-items:center; justify-content:center; padding:18px; background:rgba(244,240,231,.25); }
-    .work-cover img { display:block; width:100%; height:100%; max-width:100%; max-height:100%; box-shadow:0 12px 28px rgba(35,37,31,.18); object-fit:contain; }
+    .work-frame { width:100%; height:100%; background-color:rgba(244,240,231,.25); background-position:center; background-repeat:no-repeat; background-size:contain; box-shadow:0 12px 28px rgba(35,37,31,.18); }
+    .cover-nile { background-image:url("cover-niles-earth.png?v=2"); }
+    .cover-vernacular { background-image:url("cover-earthen-wood-vernacular.png"); }
+    .cover-asea { background-image:url("cover-asea.png"); }
     .work-card.nile { background:#4ba4a3; }
     .work-card.vernacular { background:#b79b7d; }
     .work-card.asea { background:#d8d7d1; }
-    .work-card.vernacular .work-cover { background:rgba(244,240,231,.35); }
-    .work-card.asea .work-cover { background:rgba(244,240,231,.55); }
     @keyframes show-card { 0%, 28% { opacity:1; } 33%, 100% { opacity:0; } }
     .section { max-width:1080px; margin-top:58px; }
     .section-title { margin:0 0 9px; color:var(--earth); font-size:9px; font-weight:500; letter-spacing:.15em; text-transform:uppercase; }
@@ -104,15 +105,15 @@
     <section class="selected-work" aria-label="Selected work">
       <article class="work-card nile">
         <div class="work-copy"><p class="work-label">Selected Work</p><h2 class="work-title">Evaluation Table of Ancient Earthen Building Materials</h2><p class="work-meta">Nile’s Earth · Grenoble · 2023</p></div>
-        <div class="work-cover"><img src="cover-niles-earth.png?v=2" alt="Nile’s Earth 2023 proceedings image" /></div>
+        <div class="work-cover"><div class="work-frame cover-nile" role="img" aria-label="Nile’s Earth 2023 proceedings image"></div></div>
       </article>
       <article class="work-card vernacular">
         <div class="work-copy"><p class="work-label">Selected Work</p><h2 class="work-title">Documenting Ancient Earthen Building Material Ingredients</h2><p class="work-meta">Earthen &amp; Wood Vernacular Heritage and Climate Change · Lund · 2021</p></div>
-        <div class="work-cover"><img src="cover-earthen-wood-vernacular.png" alt="Earthen and Wood Vernacular Heritage and Climate Change proceedings cover" /></div>
+        <div class="work-cover"><div class="work-frame cover-vernacular" role="img" aria-label="Earthen and Wood Vernacular Heritage and Climate Change proceedings cover"></div></div>
       </article>
       <article class="work-card asea">
         <div class="work-copy"><p class="work-label">Selected Presentation</p><h2 class="work-title">Ingredients of Earthen Building Materials: From Ancient to Contemporary Architecture</h2><p class="work-meta">Austrian Studies in Egyptian Archaeology · 2024</p></div>
-        <div class="work-cover"><img src="cover-asea.png" alt="Austrian Studies in Egyptian Archaeology lecture invitation" /></div>
+        <div class="work-cover"><div class="work-frame cover-asea" role="img" aria-label="Austrian Studies in Egyptian Archaeology lecture invitation"></div></div>
       </article>
     </section>
 
