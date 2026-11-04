@@ -38,11 +38,12 @@
     .descriptor { max-width:830px; margin:20px 0 0; color:#5A6268; font-size:14px; line-height:1.65; }
     .credential { margin:8px 0 0; color:#595a52; font-size:14px; line-height:1.65; }
     .news { position:relative; width:min(650px,100%); height:clamp(175px,18vw,220px); margin:30px 0 0; overflow:hidden; }
-    .news-card { position:absolute; inset:0; display:grid; grid-template-columns:clamp(105px,15vw,150px) 1fr; opacity:0; animation:news-cycle 15s infinite; }
+    .news-card { position:absolute; inset:0; display:grid; grid-template-columns:clamp(105px,15vw,150px) 1fr; opacity:0; animation:news-cycle 20s infinite; }
     .news-card:nth-child(1) { animation-delay:0s; }
     .news-card:nth-child(2) { animation-delay:5s; }
     .news-card:nth-child(3) { animation-delay:10s; }
-    @keyframes news-cycle { 0%, 29% { opacity:1; } 34%,100% { opacity:0; } }
+    .news-card:nth-child(4) { animation-delay:15s; }
+    @keyframes news-cycle { 0%, 24% { opacity:1; } 29%,100% { opacity:0; } }
     .news-date { display:flex; flex-direction:column; justify-content:space-between; padding:19px 17px; color:#f4f0e7; }
     .news-label { margin:0; font-size:9px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; }
     .news-year { margin:0; font-family:"Playfair Display",Georgia,serif; font-size:clamp(32px,4.2vw,53px); font-weight:500; line-height:.9; letter-spacing:-.05em; }
@@ -52,6 +53,8 @@
     .news-card.climate .news-date { background:#896b50; }
     .news-card.terra .news-date { background:#4b9290; }
     .news-card.perge .news-date { background:#6e7c59; }
+    .news-card.kullu .news-date { background:#8a6676; }
+    .news-card.kullu .news-copy h2 { font-size:clamp(18px,2.1vw,28px); }
     .places { margin:44px 0 0; width:calc(100vw - 14vw); position:relative; padding-top:34px; font-size:10px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; }
     footer { display:none; }
     .section-line { position:absolute; top:0; left:0; width:100%; height:26px; }
@@ -90,6 +93,7 @@
       <section class="news" aria-label="Selected news">
         <article class="news-card climate"><div class="news-date"><p class="news-label">Selected News</p><p class="news-year">2026</p></div><div class="news-copy"><h2><em>Reconsidering Flax in Architecture</em></h2><p>Climate-Arch Symposium 2 · Vienna · Forthcoming · 17th November</p></div></article>
         <article class="news-card perge"><div class="news-date"><p class="news-label">Selected News</p><p class="news-year">2026</p></div><div class="news-copy"><h2><em>The Northern Bath of Perge</em></h2><p>Peer-Reviewed Article · Anatolian Research · In Press · Forthcoming · December</p></div></article>
+        <article class="news-card kullu"><div class="news-date"><p class="news-label">Selected News</p><p class="news-year">2026</p></div><div class="news-copy"><h2><em>Archaeological Earthen Materials as Architectural Knowledge</em></h2><p>Peer-Reviewed Article · Journal of Technology in Architecture, Design and Planning · Accepted</p></div></article>
         <article class="news-card terra"><div class="news-date"><p class="news-label">Selected News</p><p class="news-year">2027</p></div><div class="news-copy"><h2><em>On Documentation of Ingredients</em></h2><p>Terra 14th World Congress · Al Ain · Poster Presentation · Forthcoming</p></div></article>
       </section>
       <div class="places">
