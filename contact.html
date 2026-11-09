@@ -33,8 +33,13 @@
     .menu-panel a:hover { color:var(--earth); }
     h1 { margin:0; font-family:"Playfair Display",Georgia,serif; font-weight:500; font-size:clamp(52px,7.1vw,106px); line-height:.98; letter-spacing:-.045em; }
     .intro { margin:35px 0 0; color:#595a52; font-size:14px; line-height:1.65; }
-    .email { display:inline-block; margin:15px 0 0; color:var(--earth); font-family:"Playfair Display",Georgia,serif; font-size:clamp(23px,3vw,37px); line-height:1.2; text-decoration:none; }
-    .email:hover { color:var(--ink); }
+    .contact-links { display:flex; align-items:center; gap:16px; margin:25px 0 0; }
+    .contact-link { display:inline-flex; align-items:center; justify-content:center; width:54px; height:54px; color:var(--earth); text-decoration:none; transition:color .2s ease, transform .2s ease; }
+    .contact-link:hover { color:var(--ink); transform:translateY(-2px); }
+    .contact-address { color:var(--earth); font-family:"Playfair Display",Georgia,serif; font-size:clamp(16px,1.5vw,18px); line-height:1.4; text-decoration:none; transition:color .2s ease; }
+    .contact-address:hover { color:var(--ink); }
+    .contact-link:focus-visible { outline:2px solid var(--ink); outline-offset:4px; }
+    .contact-link svg { display:block; width:36px; height:36px; }
     .places { margin:44px 0 0; width:calc(100vw - 14vw); position:relative; padding-top:34px; color:var(--ink); font-size:10px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; }
     .section-line { position:absolute; top:0; left:0; width:100%; height:26px; }
     .section-line path { fill:none; stroke:var(--ink); stroke-width:1; opacity:.33; }
@@ -65,7 +70,12 @@
     <main>
       <h1>Contact</h1>
       <p class="intro">For research, collaborations, and enquiries.</p>
-      <a class="email" href="mailto:fikriyepelin@gmail.com">fikriyepelin@gmail.com</a>
+      <div class="contact-links" aria-label="Contact and professional profiles">
+        <a class="contact-link" href="mailto:fikriyepelin@gmail.com" aria-label="Email Fikriye Pelin Kurtul-Vacek" title="Email">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3.5" y="6.5" width="25" height="19" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4.5 8 11.5 9L27.5 8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="contact-address" href="mailto:fikriyepelin@gmail.com" aria-label="Email fikriyepelin@gmail.com">fikriyepelin@gmail.com</a>
+      </div>
       <div class="places">
         <svg class="section-line" viewBox="0 0 1200 26" preserveAspectRatio="none" aria-hidden="true">
           <path d="M0 5 H248 L264 9 H620 L636 5 H945 L960 8 H1200" />
